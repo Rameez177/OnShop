@@ -1,0 +1,253 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to online Lodhi Fabrics</title>
+    <link rel="stylesheet" href="bootstrap\bootstrap-icons\bootstrap-icons.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap-icons/fonts/bootstrap-icons.woff">
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="Resources\css\style.css">
+    <link rel="stylesheet" href="Resources\css\Header.css">
+    <link rel="icon" type="image/x-icon" href="Images/fav.png">
+  </head>
+<body>
+    
+
+    <header>
+
+        <div class="navbar1" style="position: fixed;top: 0; z-index: 100;">
+          <div class="nav1">
+            <div class="menu">
+              <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"><i
+                  class="bi bi-list text-white h2"></i></button>
+            </div>
+            <div class="links">
+              <a href="https://api.whatsapp.com/send?phone=+923030926813"> <img src="Images\ww.png" class="link" alt=""></a>
+              <a href="tel:+923030926813"><img src="Images\pp.png"  class="link" alt=""></a>
+              <input type="search" onclick="openSearch()"
+                style="border-radius: 10px;position: relative; width: 16rem;margin-left: .7rem; height: 1.5rem;">
+              <span class="search"><a href="#"
+                  style="color: rgb(97, 95, 94);position: absolute; margin-left: -1.5rem; margin-top: -0.5rem;"><i
+                    class="bi bi-search"></i></a></span>
+            </div>
+            <div class="logo" class="align-self-center">
+              <a href="Index.html"> <img src="Images\logo3.png" class="my-0 py-0" alt=""></a>
+            </div>
+            <div class="cart">
+              <select id="cruncy" name="cruncy" form="form"
+                style="padding: 0.5rem 0rem; margin-right: 1rem; font-size: small; margin-top: .4rem;">
+                <option value="PKR">PKR</option>
+                <option selected value="USD">USD</option>
+
+                
+                <option value="GBR">GBR</option>
+              </select>
+              <a href="Cart.html"><i class="bi bi-cart3 text-white"></i></a>
+    
+            </div>
+          </div>
+        </div>
+        <div class="navbar2">
+          <div class="nav2">
+            <div class="user">
+              <span><a href="Login.html"><i class="bi bi-person"></i></a></span>
+            </div>
+            <div class="items pt-2">
+              <ul>
+                <li><a href="Women.html" class=" item">Women</a></li>
+                <li><a href="Girls.html" class=" item">Girls</a></li>
+                <li><a href="Men.html" class=" item">Men</a></li>
+                <li><a href="Accessories.html" class=" item">Accessories</a></li>
+                <li><a href="Sale.html" style="color: rgb(250, 38, 38);" class="item">Sale</a></li>
+              </ul>
+            </div>
+            <div class="mx-3 d-flex">
+              <a href="#" onclick="openSearch()"><i class="bi bi-search  sun px-2 "></i></a>
+              <div id="icon1" style="display: block;"><a href="#"><i class="bi bi-moon  sun px-2"></i></a></div>
+              <div id="icon2" style="display: none;"><a href="#"><i class="bi bi-sun  sun px-2"></i></a></div>
+            </div>
+          </div>
+        </div>
+    
+      </header>
+    
+      <!-- Offcanvas Navbar -->
+
+        <!-------------------Offcanvas-------------->
+  <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasWithBothOptions"
+  aria-labelledby="offcanvasWithBothOptionsLabel">
+  <div class="offcanvas-header py-2 my-0" style="background-color:black;">
+    <button class="btn-close me-auto align-items-center" data-bs-dismiss="offcanvas"><i
+        class="bi bi-x-lg text-white h2 mb-5"></i></button>
+    <h5 class="offcanvas-title d-flex justify-content-center align-items-center " id="offcanvasWithBothOptionsLabel">
+      <a href="#"> <img src="Images\logo3.png" alt="" style="width: 10rem;"></a>
+        <div id="icon" style="display: block;"><a href="#"><i class="bi bi-sun text-white  sun px-2"></i></a></div>
+    </h5>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="list-group list-group-flush px-0 mx-0">
+      <li class="list-group-item "><a href="Women.html">Women</a></li>
+      <li class="list-group-item"><a href="Girls.html">Girls</a></li>
+      <li class="list-group-item"><a href="Men.html">Men</a></li>
+      <li class="list-group-item"><a href="Accessories.html">Accessories</a></li>
+      <li class="list-group-item"><a href="Sale.html">Sale</a></li>
+    </ul>
+  </div>
+  <div class="offcanvas-footer text-secondary py-2 h6" style="background-color: #F8F8F8;">
+    <i class="bi bi-person-add h3 px-2"></i><a href="Login.html">Log In</a>
+  </div>
+</div>
+ <!-------------- Cart Page Content------------- -->
+<div class="banner1">
+    <h1 class="fw-bolder he1">Your Cart Is Empty</h1>
+    <i class="bi bi-bag-heart-fill cartbox"></i>
+    <a href="Index.html" class="btn shop my-3 my-lg-5">Continue Shopping</a>
+    <h5 class="fw-bolder he1 py-3">Have an account?</h5>
+    <small class="he1"><a href="Login.html" class="he1 text-info">Log In</a> to Check out faster.</small>
+
+</div>
+
+
+
+
+
+
+
+
+<!----------------Support Offcanvas-------------->
+
+<div class="btn text-secondary py-2  text-capitalize fw-bold" data-bs-toggle="offcanvas"
+data-bs-target="#offcanvasBottom" onclick="openChat()"
+style="background-color:#00C2Cb; position: absolute; right:2rem; bottom: 2rem; position: sticky; border-radius: 30px; float: right;">
+<span class="h6 fw-bold d-none d-md-inline text-white" >Chat</span><i
+    class="bi bi-chat mx-1 h6 fw-bold text-white"></i>
+</div>
+<div class="offcanvas  offcanvas-bottom ms-auto w-100 h-100 rounded text" data-bs-scroll="true"
+tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" style="overflow-y: scroll;">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 d-flex align-items-center justify-content-between fixed-top"  style="background-color:#000000;">
+      <div class="offcanvas-title off-title  text-white d-none d-lg-block" id="offcanvasBottomLabel">Leave US a message <i class="bi bi-chat px-2"></i></div>
+      <a href="#"> <img src="Images\logo3.png" class="my-0 py-0 w-50 img-fluid" alt="" style="margin-left: 5rem;"></a>
+      <button class="border-0 bg-transparent" data-bs-dismiss="offcanvas" onclick="closeChat()" aria-label="Close"
+      data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
+      data-bs-title="Minimize"><i class="bi bi-dash text-white h1"></i></button>
+    </div>
+    <div class="col-md-4 mt-5"></div>
+    <div class="col-md-4 mt-md-5 px-2 ">
+      <div class="offcanvas-body ">
+        <form>
+        <div class="d-flex align-items-center justify-content-center py-3">
+           <span class="h1 fw-bolder">Chat</span>  <i class="bi bi-chat h1 px-2 " style="color: #00C2Cb;"></i>
+        </div>
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+
+          <div class="mb-3">
+            <label for="sms" class="form-label">How we can help you?</label>
+            <textarea name="" class="form-control" cols="45" rows="3"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="file" class="form-label">Attachment (Optional)</label>
+            <input type="file" class="form-control text-secondary" name="" style="border: 1px dashed grey; ">
+          </div>
+      </div>
+      <div class="offcanvas-footer justify-content-center mx-5">
+        <div class="mb-3 d-flex align-items-center justify-content-center">
+          <button type="submit" class="btn text-white fw-bolder " style="background-color: #00C2Cb; padding: .5rem 10rem .5rem 10rem;">Send</button>
+        </div>
+
+        </form>
+      </div>
+    </div>
+    <div class="col-md-4 mt-5"></div>
+  </div>
+
+</div>
+</div>
+
+
+
+<div id="myOverlay" class="overlay">
+<span class="h1 float-end py-3 px-4" onclick="closeSearch()"><i class="bi bi-x text-white"></i></span>
+<div class="overlay-content">
+  <input class="form-control w-50 py-3" list="datalistOptions" tabindex="-1" id="exampleDataList" 
+    placeholder="Type to search...">
+  <datalist id="datalistOptions" class="w-100">
+    <option value="Shirts">
+    <option value="jeans">
+    <option value="trousers">
+    <option value="scarfs">
+    <option value="2 piece">
+    <option value="3 piece">
+    <option value="Froks">
+    <option value="Kurta">
+    <option value="Accesories">
+    <option value="Watches">
+    <option value="Women">
+    <option value="men">
+  </datalist>
+</div>
+</div>
+<!-- <div class="loader-wrapper">
+    <div class="loader">
+    </div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+    </div> -->
+<script>
+
+//Toggle Theme
+var sun = document.getElementById("icon");
+var moon = document.getElementById("icon1");
+var sun = document.getElementById("icon2");
+moon.addEventListener("click", function(){
+  document.body.classList.toggle("dark-theme");
+  moon.style.display = "none";
+  sun.style.display = "block";
+})
+sun.addEventListener("click", function(){
+  document.body.classList.toggle("dark-theme");
+  moon.style.display = "block";
+  sun.style.display = "none";
+})
+icon.addEventListener("click", function(){
+  document.body.classList.toggle("dark-theme");
+})
+
+
+
+// For Live Projects
+window.addEventListener('load', function () {
+  document.querySelector('body').classList.add("loaded")
+});
+//For SearchBar
+function openSearch() {
+  document.getElementById("myOverlay").style.display = "block";
+}
+function closeSearch() {
+  document.getElementById("myOverlay").style.display = "none";
+
+}
+function openChat(){
+document.body.style.overflowY = 'hidden';
+}
+function closeChat(){
+document.body.style.overflowY = 'auto';
+}
+
+
+</script>
+<script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

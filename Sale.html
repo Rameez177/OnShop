@@ -1,0 +1,532 @@
+<html lang="eng">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to online Lodhi Fabrics</title>
+  <link rel="stylesheet" href="bootstrap\bootstrap-icons\bootstrap-icons.css">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap/bootstrap-icons/fonts/bootstrap-icons.woff">
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="Resources\css\style.css">
+
+  <link rel="icon" type="image/x-icon" href="Images/fav.png">
+  <style>
+    body{
+       overflow-x: hidden;
+    }
+    .product-container {
+      display: flex;
+      flex-wrap:wrap;
+      justify-content: space-between;
+    }
+
+    .product-card {
+      padding: 2rem auto;
+      text-align: center;
+    }
+
+  
+
+    input {
+      padding: .5rem;
+      display: flex;
+      width: 15rem;
+      margin: auto;
+      font-size: .8rem;
+      border-color: red;
+      border-radius: 5rem;
+    }
+
+    .icons {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin:  auto;
+    }
+
+    .cart1,
+    .heart,
+    .com {
+      cursor: pointer;
+      color: rgb(62, 59, 59);
+      margin-bottom: 1rem;
+      font-size: .9rem;
+    }
+    .heart:hover{
+      color: red;
+    }
+    .text{
+      font-size: 1rem;
+      animation-name: example;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      color: red;
+    }
+    .liked,.title1{
+      color: red;
+      text-transform: capitalize;
+
+    }
+    .title1{
+      font-size: 1rem;
+    }
+    .items1 ul{
+      display: flex;
+      text-align: center;
+    }
+    small{
+      text-transform: capitalize;
+      font-size: .7rem;
+    }
+    #search-input{
+      width: 50%;
+      margin: 1rem auto;
+    }
+    .toast{
+      z-index: 1000;
+    }
+    .arrow{
+      font-size: 1.5rem;
+      margin-top: 5rem;
+      animation-name: example;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      color: red;
+    }
+    @keyframes example {
+  0% { color: red;}
+  20% {color: black;}
+  40% { color:aqua;}
+  60% {color: black;}
+  80% { color: red;}
+  100% {color:aqua;}
+}
+    @media screen and (max-width:568px) {
+      .title1{
+      font-size: .8rem;
+    }
+    #search-input{
+      width: 90%;
+      margin: 1rem auto;
+    }
+    .text{
+      font-size: .8rem;
+    }
+    }
+  </style>
+</head>
+
+<body>
+  <!-------------Toast------------>
+  <div class="toast-container d-flex justify-content-center align-items-center w-100">
+    <div id="liveToast" class="toast fixed-top show my-5 shadow rounded ms-auto" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header" style="background-color: rgb(14, 209, 209);">
+        <img src="Images/fav.png" class="rounded me-2 img-fluid" alt="logo" style="width: 1rem;">
+        <strong class="me-auto text-black">Lodhi Fabric</strong>
+        <small>Just Now</small>
+        <button type="button" class="btn-close  " data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body text-capitalize bg-white">
+      Welcome! to the Grand Sale🎉
+      </div>
+    </div>
+  </div>
+
+<!-----------Header----------------->
+<header>
+
+  <div class="navbar1" style="position: fixed;top: 0; ">
+    <div class="nav1">
+      <div class="menu">
+        <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"><i
+            class="bi bi-list text-white h2"></i></button>
+      </div>
+      <div class="links">
+        <a href="https://api.whatsapp.com/send?phone=+923030926813"> <img src="Images\ww.png" class="link" alt=""></a>
+        <a href="tel:+923030926813"><img src="Images\pp.png"  class="link" alt=""></a>
+        <input type="search" onclick="openSearch()"
+          style="border-radius: 10px;position: relative; width: 16rem;margin-left: .7rem; height: 1.5rem;">
+        <span class="search"><a href="#"
+            style="color: rgb(97, 95, 94);position: absolute; margin-left: -1.5rem; margin-top: -0.5rem;"><i
+              class="bi bi-search"></i></a></span>
+      </div>
+      <div class="logo" class="align-self-center">
+        <a href="Index.html"> <img src="Images\logo3.png" class="my-0 py-0" alt=""></a>
+      </div>
+      <div class="cart">
+        <select id="cruncy" name="cruncy" form="form"
+          style="padding: 0.5rem 0rem; margin-right: 1rem; font-size: small; margin-top: .4rem;">
+          <option value="PKR">PKR</option>
+          <option selected value="USD">USD</option>
+          <option value="GBR">GBR</option>
+        </select>
+        <a href="Cart.html"><i class="bi bi-cart3 text-white"></i></a>
+
+      </div>
+    </div>
+  </div>
+  <div class="navbar2">
+    <div class="nav2">
+      <div class="user">
+        <span><a href="Login.html"><i class="bi bi-person"></i></a></span>
+      </div>
+      <div class="items pt-2">
+        <ul>
+          <li><a href="Women.html" class=" item ">Women</a></li>
+          <li><a href="Girls.html" class=" item">Girls</a></li>
+          <li><a href="Men.html" class=" item">Men</a></li>
+          <li><a href="Accessories.html" class=" item">Accessories</a></li>
+          <li><a href="Sale.html" class="active" style="color: rgb(250, 38, 38);" class="item">Sale</a></li>
+        </ul>
+      </div>
+      <div class="mx-5 d-flex">
+        <a href="#" onclick="openSearch()"><i class="bi bi-search  sun px-2 "></i></a>
+        <div id="icon1" style="display: block;"><a href="#"><i class="bi bi-moon  sun px-2"></i></a></div>
+        <div id="icon2" style="display: none;"><a href="#"><i class="bi bi-sun  sun px-2"></i></a></div>
+      </div>
+    </div>
+  </div>
+
+</header>
+    <!----------Carousel---------------->
+    <div id="carouselExampleCaptions" class="carousel slide " data-bs-ride="carousel">
+      <div class="carousel-inner h-75">
+        <div class="carousel-item active ">
+          <img src="Images/sale banner 1.jpg" class="d-block w-100 h-100" alt="..." style=" object-fit: cover;">
+          <div class="carousel-caption d-md-block">
+            <p style="color: rgb(223, 25, 81); font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">By Sillicon</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="Images/sale banner 2.jpg" class="d-block w-100 h-100" alt="..." style=" object-fit: cover;">
+          <div class="carousel-caption d-md-block">
+            <p style="color:  rgb(224, 16, 82); font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">By FinLand Wolls</p>
+         
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev d-none d-md-block" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-danger rounded-circle p-3" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next d-none d-md-block" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-danger rounded-circle p-3" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  <div class="container-fluid">
+    <div class="row text-center px-0">
+      <div  style="background-color: black;">  <marquee behavior="scroll" direction="" class="text-danger p-2">Sale🎉 40% Off 🎉Sale</marquee>   </div>
+      <div class="col-md-12 py-2 py-md-4 text">
+        Search Here Now <i class="bi bi-arrow-down-short arrow mt-5"></i>
+        <input type="text"  id="search-input" placeholder="Search by name,Category or Price....">
+      </div>
+    </div>
+   <!------Cards------->
+    <div class=" row g-3 m-md-3 product-container text-center">
+      <div class="product-card mb-5 col-6 col-md-3 col-lg-2 my-auto " data-name="Kurta" data-price="2,999" data-category="men">
+      <img src="Images\Men\men9.webp" class="img-fluid  " alt="">
+      <div class="my-0 title1">Cotton Kurta</div>
+      <small>Men</small>
+      <p class="fw-bold text-black my-0">Rs. 2,799</p>
+            <div class="icons "><i class="bi bi-cart-check-fill cart1" onclick="add()"></i><i class="bi bi-arrow-left-right com"></i><i
+          class="bi bi-heart-fill  heart" onclick="like()"></i></div>
+      </div>
+      <div class="product-card mb-5  col-6 col-md-3 col-lg-2  my-auto " data-name="Kurta" data-price="2,999"
+      data-category="men">
+      <img src="Images\Men\men11.webp" class="img-fluid  " alt="">
+      <div class="my-0 title1">Contrass Kurta</div>
+      <small>Men</small>
+      <p class="fw-bold text-black my-0">Rs. 1,999</p>
+            <div class="icons"><i class="bi bi-cart-check-fill cart1" onclick="add()"></i><i class="bi bi-arrow-left-right com"></i><i
+          class="bi bi-heart-fill  heart" onclick="like()"></i></div>
+      </div>
+    <div class="product-card mb-5  col-6 col-md-3 col-lg-2 my-auto " data-name="jeans" data-price="999"
+    data-category="fashion">
+    <img src="Images\Girls\g5.webp" class="img-fluid  " alt="">
+    <div class="my-0 title1">Jeans</div>
+    <small>Fashion</small>
+    <p class="fw-bold text-black my-0">Rs. 999</p>
+        <div class="icons"><i class="bi bi-cart-check-fill cart1" id="liveToastBtn" ></i><i class="bi bi-arrow-left-right com"></i><i
+        class="bi bi-heart-fill  heart" onclick="like()"></i></div>
+  </div>
+  <div class="product-card mb-5 col-6 col-md-3 col-lg-2 my-auto " data-name="scarf" data-price="599"
+  data-category="fashion">
+  <img src="Images\Girls\g7.webp" class="img-fluid  " alt="">
+  <div class="my-0 title1">Scarf</div>
+  <small>Fashion</small>
+  <p class="fw-bold text-black my-0">Rs. 999</p>
+    <div class="icons"><i class="bi bi-cart-check-fill cart1" onclick="add()"></i><i class="bi bi-arrow-left-right com"></i><i
+      class="bi bi-heart-fill  heart" onclick="like()"></i></div>
+</div>
+<div class="product-card mb-5  col-6 col-md-3 col-lg-2 my-auto " data-name="scarf" data-price="599"
+data-category="fashion">
+<img src="Images\Girls\g9.webp" class="img-fluid  " alt="">
+<div class="my-0 title1">Scarf</div>
+<small>Fashion</small>
+<p class="fw-bold text-black my-0">Rs. 999</p>
+<div class="icons"><i class="bi bi-cart-check-fill cart1" onclick="add()"></i><i class="bi bi-arrow-left-right com"></i><i
+    class="bi bi-heart-fill  heart" onclick="like()"></i></div>
+</div>
+<div class="product-card mb-5  col-6 col-md-3 col-lg-2 my-auto " data-name="slipper" data-price="499"
+data-category="shoe">
+<img src="Images\Girls\g11.webp" class="img-fluid  " alt="">
+<div class="my-0 title1">Slliper</div>
+<small>Fashion</small>
+<p class="fw-bold text-black my-0">Rs. 499</p>
+<div class="icons"><i class="bi bi-cart-check-fill cart1" onclick="add()"></i><i class="bi bi-arrow-left-right com"></i><i
+    class="bi bi-heart-fill  heart" onclick="like()"></i></div>
+</div>
+<div class="product-card mb-5  col-6 col-md-3 col-lg-2 my-auto " data-name="sweater" data-price="599"
+data-category="winter">
+<img src="Images\Girls\g13.webp" class="img-fluid  " alt="">
+<div class="my-0 title1">Sweater</div>
+<small>Fashion</small>
+<p class="fw-bold text-black my-0">Rs. 999</p>
+<div class="icons"><i class="bi bi-cart-check-fill cart1" onclick="add()"></i><i class="bi bi-arrow-left-right com"></i><i
+    class="bi bi-heart-fill  heart" onclick="like()"></i></div>
+</div>
+<div class="product-card  mb-5 col-6 col-md-3 col-lg-2 my-auto " data-name="kurta" data-price="1999"
+data-category="winter">
+<img src="Images\Girls\g15.webp" class="img-fluid  " alt="">
+<div class="my-0 title1">Hot Sweater</div>
+<small>Fashion</small>
+<p class="fw-bold text-black my-0">Rs. 1,999</p>
+<div class="icons"><i class="bi bi-cart-check-fill cart1" onclick="add()"></i><i class="bi bi-arrow-left-right com"></i><i
+    class="bi bi-heart-fill  heart" onclick="like()"></i></div>
+</div>
+<div class="product-card mb-5 col-6 col-md-3 col-lg-2 my-auto " data-name="Looser" data-price="1.999"
+data-category="dress">
+<img src="Images\Girls\g17.webp" class="img-fluid  " alt="">
+<div class="my-0 title1">Night Dress</div>
+<small>Fashion</small>
+<p class="fw-bold text-black my-0">Rs. 1,999</p>
+<div class="icons"><i class="bi bi-cart-check-fill cart1" onclick="add()"></i><i class="bi bi-arrow-left-right com"></i><i
+    class="bi bi-heart-fill  heart" onclick="like()"></i></div>
+</div>
+<div class="product-card mb-5  col-6 col-md-3 col-lg-2 my-auto " data-name="Kurta" data-price="2,999"
+data-category="men">
+<img src="Images\Men\men3.webp" class="img-fluid  " alt="">
+<div class="my-0 title1">Men Kurta</div>
+<small>Men</small>
+<p class="fw-bold text-black my-0">Rs. 2,999</p>
+<div class="icons"><i class="bi bi-cart-check-fill cart1" onclick="add()"></i><i class="bi bi-arrow-left-right com"></i><i
+    class="bi bi-heart-fill  heart" onclick="like()"></i></div>
+</div>
+<div class="product-card mb-5 col-6 col-md-3 col-lg-2 my-auto " data-name="Kurta" data-price="2,999"
+data-category="men">
+<img src="Images\Men\men5.webp" class="img-fluid  " alt="">
+<div class="my-0 title1">Men Kurta</div>
+<small>Men</small>
+<p class="fw-bold text-black my-0">Rs. 2,899</p>
+<div class="icons"><i class="bi bi-cart-check-fill cart1" onclick="add()"></i><i class="bi bi-arrow-left-right com"></i><i
+    class="bi bi-heart-fill  heart" onclick="like()"></i></div>
+</div>
+<div class="product-card mb-5  col-6 col-md-3 col-lg-2 my-auto " data-name="Kurta" data-price="2,999"
+data-category="men">
+<img src="Images\Men\men7.webp" class="img-fluid  " alt="">
+<div class="my-0 title1">Royal Kurta</div>
+<small>Men</small>
+<p class="fw-bold text-black my-0">Rs. 3,999</p>
+<div class="icons"><i class="bi bi-cart-check-fill cart1" onclick="add()"></i><i class="bi bi-arrow-left-right com"></i><i
+    class="bi bi-heart-fill  heart" onclick="like()"></i></div>
+</div>
+<div class="product-card mb-5 col-6 col-md-3 col-lg-2 my-auto" data-name="hat" data-price="999"
+data-category="fashion">
+<img src="Images\Girls\g1.webp" class="img-fluid  " alt="">
+<div class="my-0 title1">Stylish Hat</div>
+<small>Fashion</small>
+<p class="fw-bold text-black my-0">Rs. 999</p>
+<div class="icons"><i class="bi bi-cart-check-fill cart1" onclick="add()"></i><i class="bi bi-arrow-left-right com"></i><i
+    class="bi bi-heart-fill  heart" onclick="like()"></i></div>
+</div>
+<div class="product-card  mb-5 col-6 col-md-3 col-lg-2 my-auto" data-name="perfume" data-price="2999"
+data-category="makeup">
+<img src="Images\Accesories\ac11.webp" class="img-fluid  " alt="">
+<div class="my-0 title1">Blaz Perfume</div>
+<small>Accessories</small>
+<p class="fw-bold text-black my-0">Rs.2,2999</p>
+<div class="icons"><i class="bi bi-cart-check-fill cart1" onclick="add()"></i><i class="bi bi-arrow-left-right com"></i><i
+  class="bi bi-heart-fill  heart" onclick="like()"></i></div>
+</div>
+<div class="product-card mb-5 col-6 col-md-3 col-lg-2 my-auto " data-name="perfume" data-price="3999"
+data-category="makeup">
+<img src="Images\Accesories\ac7.webp" class="img-fluid  " alt="">
+<div class="my-0 title1">Joy Perfume</div>
+<small>Accessories</small>
+<p class="fw-bold text-black my-0">Rs.3,999</p>
+<div class="icons"><i class="bi bi-cart-check-fill cart1" onclick="add()"></i><i class="bi bi-arrow-left-right com"></i><i
+  class="bi bi-heart-fill  heart" onclick="like()"></i></div>
+</div>
+<div class="product-card mb-5 col-6 col-md-3 col-lg-2 my-auto" data-name="jeans" data-price="899"
+data-category="fashion">
+<img src="Images\Girls\g2.webp" class="img-fluid  " alt="">
+<div class="my-0 title1">Jeans</div>
+<small>Fashion</small>
+<p class="fw-bold text-black my-0">Rs. 999</p>
+<div class="icons"><i class="bi bi-cart-check-fill cart1" onclick="add()"></i><i class="bi bi-arrow-left-right com"></i><i
+  class="bi bi-heart-fill  heart" onclick="like()"></i></div>
+</div>
+<div class="product-card mb-5 col-6 col-md-3 col-lg-2 my-auto" data-name="Frok" data-price="4,999"
+data-category="ladies">
+<img src="Images\Women\w3.webp" class="img-fluid  " alt="">
+<div class="my-0 title1">Frok</div>
+<small>Fashion</small>
+<p class="fw-bold text-black my-0">Rs.4,999</p>
+<div class="icons"><i class="bi bi-cart-check-fill cart1" onclick="add()"></i><i class="bi bi-arrow-left-right com"></i><i
+  class="bi bi-heart-fill  heart" onclick="like()"></i></div>
+</div>
+<div class="product-card mb-5 col-6 col-md-3 col-lg-2 my-auto" data-name="Frok" data-price="2,999"
+data-category="ladies">
+<img src="Images\Women\w9.webp" class="img-fluid  " alt="">
+<div class="my-0 title1">Top</div>
+<small>Fashion</small>
+<p class="fw-bold text-black my-0">Rs.2,999</p>
+<div class="icons"><i class="bi bi-cart-check-fill cart1" onclick="add()"></i><i class="bi bi-arrow-left-right com"></i><i
+  class="bi bi-heart-fill  heart" onclick="like()"></i></div>
+</div>
+<div class="product-card mb-5 col-6 col-md-3 col-lg-2 my-auto " data-name="purse" data-price="2,999"
+data-category="bag">
+<img src="Images\Women\w6.webp" class="img-fluid  " alt="">
+<div class="my-0 title1">Bag</div>
+<small>Fashion</small>
+<p class="fw-bold text-black my-0">Rs.2,999</p>
+<div class="icons"><i class="bi bi-cart-check-fill cart1" onclick="add()"></i><i class="bi bi-arrow-left-right com"></i><i
+  class="bi bi-heart-fill  heart" onclick="like()"></i></div>
+</div>
+<div class="product-card mb-5 col-6 col-md-3 col-lg-2 my-auto " data-name="perfume" data-price="999"
+data-category="makeup">
+<img src="Images\Accesories\ac3.webp" class="img-fluid  " alt="">
+<div class="my-0 title1">Perfume</div>
+<small>Accessories</small>
+<p class="fw-bold text-black my-0">Rs.999</p>
+<div class="icons"><i class="bi bi-cart-check-fill cart1" onclick="add()"></i><i class="bi bi-arrow-left-right com"></i><i
+  class="bi bi-heart-fill  heart" onclick="like()"></i></div>
+</div>
+
+<div class="product-card mb-5 col-6 col-md-3 col-lg-2 my-auto " data-name="scarf" data-price="1999"
+data-category="ladies">
+<img src="Images\Girls\g8.webp" class="img-fluid  " alt="">
+<div class="my-0 title1">Unique Scarf</div>
+<small>Ladies</small>
+<p class="fw-bold text-black my-0">Rs.2,2999</p>
+<div class="icons"><i class="bi bi-cart-check-fill cart1" onclick="add()"></i><i class="bi bi-arrow-left-right com"></i><i
+  class="bi bi-heart-fill  heart" onclick="like()"></i></div>
+</div>
+<div class="product-card mb-5 col-6 col-md-3 col-lg-2 my-auto" data-name="Kurta" data-price="5999"
+data-category="gents">
+<img src="Images\Men\men8.webp" class="img-fluid  " alt="">
+<div class="my-0 title1">Dark Kurta</div>
+<small>Accessories</small>
+<p class="fw-bold text-black my-0">Rs.5,999</p>
+<div class="icons"><i class="bi bi-cart-check-fill cart1" onclick="add()"></i><i class="bi bi-arrow-left-right com"></i><i
+  class="bi bi-heart-fill  heart" onclick="like()"></i></div>
+</div>
+<div class="product-card mb-5 col-6 col-md-3 col-lg-2 my-auto" data-name="Cap" data-price="699"
+data-category="Hat">
+<img src="Images\Girls\g10.webp" class="img-fluid  " alt="">
+<div class="my-0 title1">Girls Cap</div>
+<small>Accessories</small>
+<p class="fw-bold text-black my-0">Rs.699</p>
+<div class="icons"><i class="bi bi-cart-check-fill cart1" onclick="add()"></i><i class="bi bi-arrow-left-right com"></i><i
+  class="bi bi-heart-fill  heart" onclick="like()"></i></div>
+
+
+  </div>
+  <div class="product-card mb-5 col-6 col-md-3 col-lg-2 my-auto" data-name="slipper" data-price="599"
+data-category="shoe">
+<img src="Images\Girls\g12.webp" class="img-fluid  " alt="">
+<div class="my-0 title1">Yellow Slipper</div>
+<small>shoe</small>
+<p class="fw-bold text-black my-0">Rs.599</p>
+<div class="icons"><i class="bi bi-cart-check-fill cart1" onclick="add()"></i><i class="bi bi-arrow-left-right com"></i><i
+  class="bi bi-heart-fill  heart" onclick="like()"></i></div>
+
+
+  </div>
+  <div class="h1 nofound my-5 py-5 text-secondary text-capitalize"></div>
+</div>
+      <!-------------------Offcanvas-------------->
+      <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+        id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header py-2 my-0" style="background-color:black;">
+          <button class="btn-close me-auto align-items-center" data-bs-dismiss="offcanvas"><i
+              class="bi bi-x-lg text-black h2 mb-5"></i></button>
+          <h5 class="offcanvas-title d-flex justify-content-center align-items-center "
+            id="offcanvasWithBothOptionsLabel">
+            <a href="#"> <img src="Images\logo3.png" alt="" style="width: 10rem;"></a>
+           
+          </h5>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="list-group list-group-flush px-0 mx-0">
+            <li class="list-group-item text-black"><a href="Women.html">Women</a></li>
+            <li class="list-group-item"><a href="Girls.html">Girls</a></li>
+            <li class="list-group-item "><a href="Men.html">Men</a></li>
+            <li class="list-group-item"><a href="Accessories.html">Accessories</a></li>
+            <li class="list-group-item bg-dark"><a href="Sale.html" class=" text-light ">Sale</a></li>
+          </ul>
+        </div>
+        <div class="offcanvas-footer text-secondary py-2 h6" style="background-color: #F8F8F8;">
+          <i class="bi bi-person-add h3 px-2"></i><a href="Login.html">Log In</a>
+        </div>
+      </div>
+  <!-----------------Footer------------------->
+  <section class=" pt-5 footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <ul class="mx-0 px-0">
+            <li> <a href="#" class="h5 fw-bolder "><small>CUSTOMER CARE</small></a></li>
+            <li> <a href="#"><small>SHIPPING & HANDLING</small></a></li>
+            <li><a href="#"><small>EXCHANGE POLICY</small></a></li>
+            <li> <a href="#"><small>ORDER CANCELLATIOn</small></a></li>
+            <li> <a href="#"><small>PRIVACY POLICY</small></a></li>
+            <li> <a href="#"><small>TERMS OF USE</small></a></li>
+            <li> <a href="#"><small>FAQ’S</small></a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6">
+          <ul class="mx-0 px-0">
+            <li> <a href="#" class="h5 fw-bolder "><small>Infirmation</small></a></li>
+            <li> <a href="#"><small>ABOUT US</small></a></li>
+            <li><a href="#"><small>CONTACT US</small></a></li>
+            <li> <a href="#"><small>CARREARS</small></a></li>
+            <li> <a href="#"><small>STORE LOCATOR</small></a></li>
+            <li> <a href="#"><small>LIMELIGHTS TRENDS</small></a></li>
+          </ul>
+        </div>
+        
+          <div class="col-md-12 mt-5">
+            <div class=" text-center">
+              <div class=" text-center">
+                <a href="#"><img src="Images\facebook.png" class="rounded" alt=""
+                    style="width: 2rem; margin-right: 1.5rem;"></a>
+                <a href="#"><img src="Images\insta.png" class="rounded" alt=""
+                    style="width: 2rem; margin-right: 1.5rem;"></a>
+                <a href="#"><img src="Images\youtube.png" class="rounded" alt="" style="width: 2rem;"></a>
+              </div>
+              <span class="fw-bold text-center off my-5 ">We Accept</span>
+              <div class="d-flex align-items-center justify-content-center my-3">
+                <a href="#"><img src="Images\visa.png" alt="" style="width: 2rem; margin-right: 1.5rem;"></a>
+                <a href="#"><img src="Images\master.png" alt="" style="width: 2rem;"></a>
+              </div>
+              <small class="text-center text-secondary">© 2023, LodhiFabrics.pk <a href="https://rameezkhan.netlify.app/"
+                  class="text-decoration-none text-secondary"> Powered by Rameez Khan</a></small>
+  
+            </div>
+          </div>
+      </div>
+    
+    </div>
+  </section>
+  
+
+  <script src="search-engine.js"></script>
+  <script src="Resources\JS\Common.js"></script>
+</body>
+
+</html>

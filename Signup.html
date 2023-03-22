@@ -1,0 +1,155 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to online Lodhi Fabrics</title>
+    <link rel="stylesheet" href="bootstrap\bootstrap-icons\bootstrap-icons.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap-icons/fonts/bootstrap-icons.woff">
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="Resources\css\style.css">
+    <link rel="stylesheet" href="Resources\css\Header.css">
+    <link rel="icon" type="image/x-icon" href="Images/fav.png">
+    <style>
+      label, .text{
+        text-transform: capitalize;
+      }
+    </style>
+  </head>
+<body>
+    
+
+    <header>
+
+        <div class="navbar1" style="position: fixed;top: 0; z-index: 100;">
+          <div class="nav1">
+            <div class="menu">
+              <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"><i
+                  class="bi bi-list text-white h2"></i></button>
+            </div>
+            <div class="links">
+              <a href="https://api.whatsapp.com/send?phone=+923030926813"> <img src="Images\ww.png" class="link" alt=""></a>
+              <a href="tel:+923030926813"><img src="Images\pp.png"  class="link" alt=""></a>
+              <input type="search" onclick="openSearch()"
+                style="border-radius: 10px;position: relative; width: 16rem;margin-left: .7rem; height: 1.5rem;">
+              <span class="search"><a href="#"
+                  style="color: rgb(97, 95, 94);position: absolute; margin-left: -1.5rem; margin-top: -0.5rem;"><i
+                    class="bi bi-search"></i></a></span>
+            </div>
+            <div class="logo" class="align-self-center">
+              <a href="Index.html"> <img src="Images\logo3.png" class="my-0 py-0" alt=""></a>
+            </div>
+            <div class="cart">
+              <select id="cruncy" name="cruncy" form="form"
+                style="padding: 0.5rem 0rem; margin-right: 1rem; font-size: small; margin-top: .4rem;">
+                <option value="PKR">PKR</option>
+                <option selected value="USD">USD</option>
+                <option value="GBR">GBR</option>
+              </select>
+              <a href="Cart.html"><i class="bi bi-cart3 text-white"></i></a>
+    
+            </div>
+          </div>
+        </div>
+  
+         
+    
+
+    
+      </header>
+         <!-------------------Offcanvas-------------->
+         <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+         id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+         <div class="offcanvas-header py-2 my-0" style="background-color:black;">
+           <button class="btn-close me-auto align-items-center" data-bs-dismiss="offcanvas"><i
+               class="bi bi-x-lg text-white h2 mb-5"></i></button>
+           <h5 class="offcanvas-title d-flex justify-content-center align-items-center "
+             id="offcanvasWithBothOptionsLabel">
+             <a href="#"> <img src="Images\logo3.png" alt="" style="width: 10rem;"></a>
+             <div id="icon" style="display: block;"><a href="#"><i class="bi bi-sun text-white  sun px-2"></i></a></div>
+           </h5>
+         </div>
+         <div class="offcanvas-body">
+           <ul class="list-group list-group-flush px-0 mx-0">
+             <li class="list-group-item text-white"><a href="Women.html">Women</a></li>
+             <li class="list-group-item"><a href="Girls.html">Girls</a></li>
+             <li class="list-group-item "><a href="Men.html">Men</a></li>
+             <li class="list-group-item"><a href="Accessories.html">Accessories</a></li>
+             <li class="list-group-item"><a href="Sale.html">Sale</a></li>
+           </ul>
+         </div>
+         <div class="offcanvas-footer text-secondary py-2 h6" style="background-color: #F8F8F8;">
+           <i class="bi bi-person-add h3 px-2"></i><a href="Login.html">Log In</a>
+         </div>
+       </div>
+    
+   <div class="container-fluid mt-5">
+    <div class="row mt-5 py-5">
+      <div class="col-12 d-flex justify-content-center mb-5">
+        <h3> SignUp</h3>
+      </div>
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <form action="Login.html">
+          <div class="mb-3">
+            <label for="exampleInputname" class="form-label" >First Name</label>
+            <input type="text" class="form-control" id="exampleInputname" required aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputname1" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="exampleInputname1" required aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" required id="exampleInputPassword1">
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Remember me</label>
+          </div>
+          <button type="submit" class="btn btn-dark d-block w-100" onclick="Signup()">SignUp</button>
+        </form>
+       <small class="d-flex justify-content-center align-items-center text"> Have an account? <a href="Login.html" class="text-primary"> LogIn</a></small>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+   </div>
+
+ 
+   <script>
+    function Signup(){
+      alert("Welcome!")
+    }
+   </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
